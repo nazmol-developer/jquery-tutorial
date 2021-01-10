@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="images/magenta.jpg">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+
+	
+
+</head>
+<body>
+
+	<section id="naz1">
+		<div id="flip">
+			<button style="padding: 5px;">Click to see me.</button>
+		</div>
+		<div id="panel">
+			<h1><b>I am web designer</b></h1>
+			<p>Iam nazmul hasan. Iam student of dreamland IT batch-328.</p>
+			<img src="images/865.jpg" alt="">
+
+
+
+		</div>
+	</section>
+
+
+	<section id="naz2">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ad, at voluptatum nemo odit impedit. Doloribus unde doloremque consectetur praesentium, ad, nobis? Atque veritatis accusantium aspernatur non, eos consequatur.</p>
+		<button id="hide" style="padding: 5px;">Hide</button>
+		<button id="show" style="padding: 5px;">Show</button>
+	</section>
+
+
+	<section id="naz3">
+		<div>
+			<p id="test1">This is a paragraph.</p>
+			<p id="test2">This is another paragraph.</p>
+			<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+			<button id="btn1">Set Text</button>
+			<button id="btn2">Set HTML</button>
+			<button id="btn3">Set Value</button>
+		</div>
+	</section>
+
+	<section id="naz5">
+		<div>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<p>This is a paragraph.</p>
+			<p>This is another paragraph.</p>
+			<div>This is some important text!</div><br>
+			<button>Add classes to elements</button>
+		</div>
+	</section>
+
+
+
+	<section id="naz4">
+		<div>
+			<button id="naz44">start animation</button>
+		<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Dolores, iure. Sint quasi autem nihil a quas ullam mollitia dolores est accusantium, doloremque exercitationem cum officiis, veritatis sit earum alias, officia.</p>
+		<div id="naz444"></div>
+		</div>
+	</section>
+
+
+
+
+
+	
+
+	
+
+
+
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide(1000);
+  });
+  $("#show").click(function(){
+    $("p").show(1000);
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+
+
+<script>
+	$(document).ready(function(){
+		$("#naz44").click(function(){
+			$("#naz444").animate({
+				left: '250px',
+				opacity: '0.5',
+				height: '150px',
+				width: '150px',
+			});
+		});
+	});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text("Iam nazmol!");
+  });
+  $("#btn2").click(function(){
+    $("#test2").html("<b>Dreamland IT!</b>");
+  });
+  $("#btn3").click(function(){
+    $("#test3").val("Dolly Duck");
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
